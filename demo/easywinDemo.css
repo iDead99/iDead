@@ -1,0 +1,654 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    animation-name: blinkBackground;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.playerComputer{
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 3px;
+}
+.playerComputer #player{
+    background-color: black;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-right: 3.1em;
+}
+.playerComputer #computer{
+    background-color: black;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-left: 2.5em;
+}
+
+main .ScorelineBtnContainer{
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 380px;
+    height: 70px;
+}
+main .LeftScorelineBtnContainer{
+    background-color: yellow;
+    padding: 10px;
+    border: 4px solid black;
+    border-radius: 50px;
+    animation-name: ScorelineWinLoad;
+    animation-duration: 2s;
+    margin-right: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.LeftScorelineBtnContainer .LeftScorelineBtn{
+    border: 2px solid black;
+    border-radius: 50px;
+    color: white;
+    font-size: 35px;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+}
+
+main .RightScorelineBtnContainer{
+    background-color: yellow;
+    padding: 10px;
+    border: 4px solid black;
+    border-radius: 50px;
+    animation-name: ScorelineWinLoad;
+    animation-duration: 2s;
+    margin-left: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.RightScorelineBtnContainer .RightScorelineBtn{
+    border: 2px solid black;
+    border-radius: 50px;
+    color: white;
+    font-size: 35px;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+}
+
+@keyframes ScorelineWinLoad {
+    0%{background-color: red;}
+    25%{background-color: blue;}
+    50%{background-color: red;}
+    75%{background-color: blue;}
+}
+@keyframes ScorelineWin {
+    0%{background-color: red;}
+    25%{background-color: blue;}
+    50%{background-color: red;}
+    75%{background-color: blue;}
+}
+.LeftScorelineBtnContainer.animate{
+    animation-name: ScorelineWin;
+    animation-duration: 1s;
+}
+.RightScorelineBtnContainer.animate{
+    animation-name: ScorelineWin;
+    animation-duration: 1s;
+}
+
+#BackBtn{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    transform: translateY(20px);
+    border-radius: 10px;
+}
+
+.btnContainer{
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: red;
+    padding: 0%;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+main .btnContainer::before,
+.btnContainer::after{
+    content: "";
+    position: absolute;
+    top: -1%;
+    bottom: -1%;
+    left: -1%;
+    right: -1%;
+    border: 25px solid white;
+    border-radius: 50%;
+    pointer-events: none;
+}
+main .btnContainer::after{
+    content: "";
+    position: absolute;
+    top: -1.5%;
+    bottom: -1.5%;
+    left: -1.5%;
+    right: -1.5%;
+    border: 20px solid black;
+    border-radius: 50%;
+}
+@keyframes rotate {
+    25%{transform: scale(0.8,0.8);}
+    100%{transform: scale(1.2,1.2);}
+    50%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+.btnContainer.animate{
+    animation-name: rotate;
+    animation-duration: 4s;
+    
+}
+
+.btnContainer .btn{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid black;
+    font-size: 35px;
+    box-sizing: content-box;
+    padding: 10px 10px;
+    color: white;
+    background-color: black;
+    animation-name: moveButton, btnGrow;
+    animation-duration: 3s;
+
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.btnContainer #btn11{
+    animation-name: CenterButton;
+    animation-duration: 3s;
+    border: 3px solid black;
+    color: black;
+    font-stretch:extra-condensed;
+    font-weight: bold;
+    text-align: center;
+    background-color: white;
+    border: 2px solid rgb(132, 132, 132);
+    font-size: 10px;
+}
+
+.btn12Container #btn12{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid black;
+    font-size: 35px;
+    box-sizing: content-box;
+    padding: 10px 10px;
+    color: white;
+    background-color: black;
+}
+
+.btnContainer .btn{
+    animation-name: btnGrow;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+}
+
+@keyframes btnGrow {
+    25%{transform: scale(2,2);}
+    50%{transform: rotate(0deg) translate(90px) rotate(-0deg);}
+}
+
+@keyframes blinkBackground {
+    from{background-color: rgb(0, 255, 0);}
+}
+
+.btnContainer .btn:nth-child(9){transform:   rotate(0deg) translate(90px) rotate(-0deg);}
+.btnContainer .btn:nth-child(4){transform:   rotate(36deg) translate(90px) rotate(-36deg);}
+.btnContainer .btn:nth-child(7){transform:   rotate(72deg) translate(90px) rotate(-72deg);}
+.btnContainer .btn:nth-child(3){transform:   rotate(108deg) translate(90px) rotate(-108deg);}
+.btnContainer .btn:nth-child(2){transform:   rotate(144deg) translate(90px) rotate(-144deg);}
+.btnContainer .btn:nth-child(6){transform:   rotate(180deg) translate(90px) rotate(-180deg);}
+.btnContainer .btn:nth-child(8){transform:   rotate(216deg) translate(90px) rotate(-216deg);}
+.btnContainer .btn:nth-child(10){transform:   rotate(252deg) translate(90px) rotate(-252deg);}
+.btnContainer .btn:nth-child(1){transform:   rotate(288deg) translate(90px) rotate(-288deg);}
+.btnContainer .btn:nth-child(5){transform:   rotate(324deg) translate(90px) rotate(-324deg);}
+.btnContainer .btn:nth-child(11){transform:   rotate(0deg) translate(0px) rotate(0deg);}
+
+#replayBtn{
+    border-radius: 5px;
+    border: 4px solid;
+    background-color: black;
+    color: white;
+    display: none;
+    width: 100px;
+    height: 40px;
+    font-size: larger;
+}
+#replayBtn:hover{
+    transform: scale(1.1, 1.1);
+    background-color: rgb(67, 67, 67);
+}
+#replayBtn:active{
+    background-color: gray;
+}
+
+.displayResult{
+    width: 200px;
+    height: 100px;
+    display: inline-block;
+    background-color: black;
+    border: 5px solid white;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.displayResult #result{
+    text-align: center;
+    color: white;
+}
+
+
+/* Mobile-M */
+@media only screen and (min-width:425px){
+    .playerComputer #player{
+        margin-right: 3em;
+        margin-left: 0.5em;
+    }
+    .playerComputer #computer{
+        margin-left: 4em;
+    }
+
+    main .ScorelineBtnContainer{
+        width: 380px;
+        height: 70px;
+    }
+    .LeftScorelineBtnContainer{
+        width: 500px;
+        height: 45px;
+        margin-left: 1.5em;
+    }
+    .LeftScorelineBtnContainer .LeftScorelineBtn{
+        width: 43px;
+        height: 43px;
+        font-size: 25px;
+    }
+    .RightScorelineBtnContainer{
+        width: 500px;
+        height: 45px;
+        margin-left: 1.5em;
+    }
+    .RightScorelineBtnContainer .RightScorelineBtn{
+        width: 43px;
+        height: 43px;
+        font-size: 25px;
+    }
+
+    .btnContainer{
+        padding: 5%;
+    }
+    .btnContainer .btn{
+        width: 25px;
+        height: 25px;
+        font-size: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .btnContainer #btn11{
+        font-size: 12px;
+    }
+
+    @keyframes btnGrow {
+        25%{transform: scale(2,2);}
+        50%{transform: rotate(0deg) translate(110px) rotate(-0deg);}
+    }
+
+.btnContainer .btn:nth-child(9){transform:   rotate(0deg) translate(110px) rotate(-0deg);}
+.btnContainer .btn:nth-child(4){transform:   rotate(36deg) translate(110px) rotate(-36deg);}
+.btnContainer .btn:nth-child(7){transform:   rotate(72deg) translate(110px) rotate(-72deg);}
+.btnContainer .btn:nth-child(3){transform:   rotate(108deg) translate(110px) rotate(-108deg);}
+.btnContainer .btn:nth-child(2){transform:   rotate(144deg) translate(110px) rotate(-144deg);}
+.btnContainer .btn:nth-child(6){transform:   rotate(180deg) translate(110px) rotate(-180deg);}
+.btnContainer .btn:nth-child(8){transform:   rotate(216deg) translate(110px) rotate(-216deg);}
+.btnContainer .btn:nth-child(10){transform:   rotate(252deg) translate(110px) rotate(-252deg);}
+.btnContainer .btn:nth-child(1){transform:   rotate(288deg) translate(110px) rotate(-288deg);}
+.btnContainer .btn:nth-child(5){transform:   rotate(324deg) translate(110px) rotate(-324deg);}
+.btnContainer .btn:nth-child(11){transform:   rotate(0deg) translate(0px) rotate(0deg);}
+
+#replayBtn{
+    width: 100px;
+    height: 40px;
+    font-size: larger;
+}
+
+}
+
+/* Tablet-Laptop */
+@media only screen and (min-width:768px){
+    .playerComputer #player{
+        margin-left: 1em;
+        margin-bottom: 20px;
+        font-size: 35px;
+        border-radius: 10px;
+    }
+    .playerComputer #computer{
+        margin-left: 2em;
+        margin-bottom: 20px;
+        font-size: 35px;
+        border-radius: 10px;
+    }
+
+    main .ScorelineBtnContainer{
+        width: 580px;
+    }
+    .LeftScorelineBtnContainer{
+        width: 400px;
+        height: 70px;
+        margin-left: 1.5em;
+    }
+    .LeftScorelineBtnContainer .LeftScorelineBtn{
+        width: 75px;
+        height: 75px;
+        font-size: 40px;
+    }
+    .RightScorelineBtnContainer{
+        width: 400px;
+        height: 70px;
+        margin-left: 1.5em;
+    }
+    .RightScorelineBtnContainer .RightScorelineBtn{
+        width: 75px;
+        height: 75px;
+        font-size: 40px;
+    }
+    #BackBtn{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    transform: translateY(20px);
+    border-radius: 10px;
+    }
+
+    .btnContainer{
+        padding: 15%;
+    }
+    .btnContainer .btn{
+        width: 50px;
+        height: 50px;
+        font-size: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .btnContainer #btn11{
+        font-size: 20px;
+    }
+
+    @keyframes btnGrow {
+        25%{transform: scale(2,2);}
+        50%{transform: rotate(0deg) translate(150px) rotate(-0deg);}
+    }
+
+.btnContainer .btn:nth-child(9){transform:   rotate(0deg) translate(160px) rotate(-0deg);}
+.btnContainer .btn:nth-child(4){transform:   rotate(36deg) translate(160px) rotate(-36deg);}
+.btnContainer .btn:nth-child(7){transform:   rotate(72deg) translate(160px) rotate(-72deg);}
+.btnContainer .btn:nth-child(3){transform:   rotate(108deg) translate(160px) rotate(-108deg);}
+.btnContainer .btn:nth-child(2){transform:   rotate(144deg) translate(160px) rotate(-144deg);}
+.btnContainer .btn:nth-child(6){transform:   rotate(180deg) translate(160px) rotate(-180deg);}
+.btnContainer .btn:nth-child(8){transform:   rotate(216deg) translate(160px) rotate(-216deg);}
+.btnContainer .btn:nth-child(10){transform:   rotate(252deg) translate(160px) rotate(-252deg);}
+.btnContainer .btn:nth-child(1){transform:   rotate(288deg) translate(160px) rotate(-288deg);}
+.btnContainer .btn:nth-child(5){transform:   rotate(324deg) translate(160px) rotate(-324deg);}
+.btnContainer .btn:nth-child(11){transform:   rotate(0deg) translate(0px) rotate(0deg);}
+
+#replayBtn{
+    width: 160px;
+    height: 60px;
+    font-size: 35px;
+    border-radius: 8px;
+}
+
+.displayResult{
+    width: 280px;
+    height: 140px;
+    font-size: 25px;
+}
+
+}
+
+/* Laptop 1440 */
+@media only screen and (min-width:1440px) and (max-width:2000px){
+    .playerComputer #player{
+        margin-left: 1em;
+        margin-bottom: 1em;
+        font-size: 50px;
+        border-radius: 10px;
+    }
+    .playerComputer #computer{
+        margin-left: 1em;
+        margin-bottom: 1em;
+        font-size: 50px;
+        border-radius: 10px;
+    }
+
+    main .ScorelineBtnContainer{
+        width: 700px;
+        margin-bottom: 4em;
+    }
+    .LeftScorelineBtnContainer{
+        height: 120px;
+    }
+    .LeftScorelineBtnContainer .LeftScorelineBtn{
+        width: 100px;
+        height: 100px;
+        font-size: 40px;
+    }
+    .RightScorelineBtnContainer{
+        height: 120px;
+    }
+    .RightScorelineBtnContainer .RightScorelineBtn{
+        width: 100px;
+        height:100px;
+        font-size: 40px;
+    }
+
+    #BackBtn{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 50px;
+        transform: translateY(20px);
+        border-radius: 10px;
+    }
+
+    .btnContainer{
+        padding: 25%;
+    }
+    .btnContainer .btn{
+        width: 90px;
+        height: 90px;
+        font-size: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .btnContainer #btn11{
+        font-size: 30px;
+    }
+
+    @keyframes btnGrow {
+        25%{transform: scale(2,2);}
+        50%{transform: rotate(0deg) translate(230px) rotate(-0deg);}
+    }
+
+.btnContainer .btn:nth-child(9){transform:   rotate(0deg) translate(230px) rotate(-0deg);}
+.btnContainer .btn:nth-child(4){transform:   rotate(36deg) translate(230px) rotate(-36deg);}
+.btnContainer .btn:nth-child(7){transform:   rotate(72deg) translate(230px) rotate(-72deg);}
+.btnContainer .btn:nth-child(3){transform:   rotate(108deg) translate(230px) rotate(-108deg);}
+.btnContainer .btn:nth-child(2){transform:   rotate(144deg) translate(230px) rotate(-144deg);}
+.btnContainer .btn:nth-child(6){transform:   rotate(180deg) translate(230px) rotate(-180deg);}
+.btnContainer .btn:nth-child(8){transform:   rotate(216deg) translate(230px) rotate(-216deg);}
+.btnContainer .btn:nth-child(10){transform:   rotate(252deg) translate(230px) rotate(-252deg);}
+.btnContainer .btn:nth-child(1){transform:   rotate(288deg) translate(230px) rotate(-288deg);}
+.btnContainer .btn:nth-child(5){transform:   rotate(324deg) translate(230px) rotate(-324deg);}
+.btnContainer .btn:nth-child(11){transform:   rotate(0deg) translate(0px) rotate(0deg);}
+
+#replayBtn{
+    width: 210px;
+    height: 90px;
+    font-size: 50px;
+    border-radius: 8px;
+    border-radius: 20px;
+}
+
+.displayResult{
+    width:400px;
+    height: 200px;
+    font-size: 35px;
+}
+
+}
+
+/* Laptop 2001 */
+@media only screen and (min-width:2001px){
+    .playerComputer #player{
+        margin-top: 0.5em;
+        margin-left: 1em;
+        margin-bottom: 1.3em;
+        font-size: 120px;
+        border-radius: 10px;
+    }
+    .playerComputer #computer{
+        margin-top: 0.5em;
+        margin-left: 3em;
+        margin-bottom: 1.3em;
+        font-size: 120px;
+        border-radius: 10px;
+    }
+
+    main .ScorelineBtnContainer{
+        width: 3000px;
+        margin-bottom: 15em;
+    }
+    .LeftScorelineBtnContainer{
+        width: 900px;
+        height: 300px;
+        transform: translateX(-4em);
+    }
+    .LeftScorelineBtnContainer .LeftScorelineBtn{
+        width: 280px;
+        height: 280px;
+        font-size: 140px;
+        border-radius: 100%;
+    }
+    .RightScorelineBtnContainer{
+        width: 900px;
+        height: 300px;
+        transform: translateX(8em);
+    }
+    .RightScorelineBtnContainer .RightScorelineBtn{
+        width: 280px;
+        height: 280px;
+        font-size: 140px;
+        border-radius: 100%;
+    }
+
+    #BackBtn{
+        margin-top: 20px;
+        margin-bottom: 90px;
+        font-size: 100px;
+        transform: translateY(20px);
+        border-radius: 10px;
+    }
+
+    .btnContainer{
+        padding: 23%;
+    }
+    .btnContainer .btn{
+        width: 220px;
+        height: 220px;
+        font-size: 130px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .btnContainer #btn11{
+        font-size: 70px;
+    }
+
+    @keyframes btnGrow {
+        25%{transform: scale(2,2);}
+        50%{transform: rotate(0deg) translate(540px) rotate(-0deg);}
+    }
+
+.btnContainer .btn:nth-child(9){transform:   rotate(0deg) translate(540px) rotate(-0deg);}
+.btnContainer .btn:nth-child(4){transform:   rotate(36deg) translate(540px) rotate(-36deg);}
+.btnContainer .btn:nth-child(7){transform:   rotate(72deg) translate(540px) rotate(-72deg);}
+.btnContainer .btn:nth-child(3){transform:   rotate(108deg) translate(540px) rotate(-108deg);}
+.btnContainer .btn:nth-child(2){transform:   rotate(144deg) translate(540px) rotate(-144deg);}
+.btnContainer .btn:nth-child(6){transform:   rotate(180deg) translate(540px) rotate(-180deg);}
+.btnContainer .btn:nth-child(8){transform:   rotate(216deg) translate(540px) rotate(-216deg);}
+.btnContainer .btn:nth-child(10){transform:   rotate(252deg) translate(540px) rotate(-252deg);}
+.btnContainer .btn:nth-child(1){transform:   rotate(288deg) translate(540px) rotate(-288deg);}
+.btnContainer .btn:nth-child(5){transform:   rotate(324deg) translate(540px) rotate(-324deg);}
+.btnContainer .btn:nth-child(11){transform:   rotate(0deg) translate(0px) rotate(0deg);}
+
+#replayBtn{
+    margin-top: 0.5em;
+    width: 510px;
+    height: 200px;
+    font-size: 100px;
+    border-radius: 40px;
+}
+
+.displayResult{
+    width: 1400px;
+    height: 500px;
+    font-size: 100px;
+    border-radius: 5%;
+}
+
+}

@@ -1,0 +1,242 @@
+body{
+    margin: 0;
+    padding: 0%;
+    background-color: black;
+    /* overflow: hidden; */
+}
+main{
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+header{
+    background-color: navy;
+    text-align: center;
+    height: 120px;
+}
+#siteName{
+    border: 2px solid white;
+    display: inline-block;
+    background-color: black;
+    color: white;
+    margin-top: 40px;
+}
+#signupTextContainer{
+    width: 90px;
+    height: 30px;
+    box-shadow: -2px -2px gray;
+    background-color: rgb(241, 241, 241);
+    text-align: center;
+    transform: translate(115px, -19px);
+}
+#signupText{
+    display: inline-block;
+    transform: translateY(2px);
+    text-decoration: underline;  
+    font-weight: bold;
+    font-size: 20px;
+}
+#usernameError{
+    color: rgb(255, 0, 0);
+    font-size: 20px;
+    display: none;
+}
+
+#passwordError1{
+    color: rgb(206, 2, 2);
+    position: absolute;
+    margin-left: 14em;
+    margin-top: -2.1em;
+    font-size: 20px;
+    font-weight: bold;
+    display: none;
+}
+#passwordError2{
+    color: rgb(255, 0, 0);
+    font-size: 20px;
+}
+#passwordTooShort{
+    color: rgb(206, 2, 2);
+    position: absolute;
+    margin-left: 9em;
+    margin-top: -2.2em;
+    font-size: 20px;
+    font-weight: bold;
+    display: none;
+}
+#emailError{
+    color: rgb(255, 0, 0);
+    font-size: 20px;
+    display: none;
+}
+#signUpText{
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.formContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-self: center;
+}
+
+.textField{
+    display: block;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif, 'Times New Roman', Times, serif;
+    background-color: white;
+}
+.textField:hover{
+    background-color: rgb(255, 255, 255);
+    transform: scaleY(1.2);
+    box-shadow: 0px 0px 10px 2px white;
+}
+#submitBtn{
+    width: 100%;
+    font-size: 25px;
+    margin-top: 2%;
+    border-radius: 8px;
+    background-color: navy;
+    color: white;
+    box-shadow: 0px 0px 10px 2px white;
+}
+#submitBtn:hover{
+    transform: scale(1.05);
+    background-color: rgb(1, 1, 78);
+}
+#submitBtn:active{
+    color: black;
+    background-color: rgb(0, 121, 250);
+    transform: scale(1);
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px){
+
+    #passwordTooShort{
+        margin-left: 12.7em;
+        margin-top: -2.1em;
+        font-size: 25px;
+    }
+    #passwordError1{
+        margin-left: 12.6em;
+        margin-top: -1.6em;
+        font-size: 35px;
+    }
+
+    #siteName{
+        font-size: 40px;
+    }
+    #signUpText{
+        font-size: 40px;
+        margin-bottom: 20px;
+        margin-left: 0%;
+    }
+    .textField{
+        font-size: 2em;
+    }
+    #usernameError, #passwordError2, #emailError{
+        font-size: 2em;
+    }
+    #submitBtn{
+        font-size: 2.3em;
+    }
+}
+
+/* Laptop-L */
+@media only screen and (min-width: 1440px){
+
+    #passwordTooShort{
+        margin-left: 15.5em;
+        margin-top: -2.1em;
+        font-size: 37px;
+    }
+    #passwordError1{
+        margin-left: 16.9em;
+        margin-top: -1.7em;
+        font-size: 45px;
+    }
+
+    header{
+        height: 175px;
+    }
+    #siteName{
+        font-size: 70px;
+    }
+    #loginText{
+        font-size: 60px;
+        margin-bottom: 20px;
+        margin-left: 0%;
+    }
+    .textField{
+        font-size: 3.5em;
+    }
+    #usernameError{
+        font-size: 3em;
+    }
+    .forgotPasswordContainer{
+        margin-top: 10px;
+        font-size: 3em;
+    }
+    #submitBtn{
+        font-size: 4em;
+    }
+    .signContainer{
+        font-size: 3em; 
+    }
+}
+
+/* Laptop-4K */
+@media only screen and (min-width: 2560px){
+
+    #passwordTooShort{
+        margin-left: 19em;
+        margin-top: -1.9em;
+        font-size: 80px;
+    }
+    #passwordError1{
+        margin-left: 19.3em;
+        margin-top: -1.7em;
+        font-size: 100px;
+    }
+
+    header{
+        height: 400px;
+    }
+    #siteName{
+        font-size: 150px;
+        border: 5px solid white;
+        margin-top: 100px;
+    }
+    #signUpText{
+        font-size: 130px;
+        margin-bottom: 80px;
+        margin-left: 0%;
+    }
+    .textField{
+        font-size: 9em;
+        border-radius: 40px;
+    }
+    #usernameError{
+        font-size: 9em;
+    }
+    .forgotPasswordContainer{
+        margin-top: 10px;
+        font-size: 9em;
+    }
+    #submitBtn{
+        font-size: 9em;
+        border-radius: 40px;
+    }
+    .signContainer{
+        font-size: 9em; 
+    }
+}

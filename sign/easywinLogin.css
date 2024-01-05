@@ -1,0 +1,195 @@
+body{
+    margin: 0;
+    padding: 0%;
+    background-color: black;
+    overflow: hidden;
+}
+header{
+    background-color: navy;
+    text-align: center;
+    height: 120px;
+}
+#siteName{
+    border: 2px solid white;
+    display: inline-block;
+    background-color: black;
+    color: white;
+    margin-top: 40px;
+}
+main{
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+#usernameError{
+    color: rgb(255, 0, 0);
+    font-size: 20px;
+    position: static;
+    display: inline-block;
+    transform: translateY(-8px);
+}
+
+#loginText{
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.formContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-self: center;
+}
+
+.textField{
+    display: block;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif, 'Times New Roman', Times, serif;
+    background-color: white;
+}
+.textField:hover{
+    background-color: rgb(255, 255, 255);
+    transform: scaleY(1.2);
+    box-shadow: 0px 0px 10px 2px white;
+}
+.forgotPasswordContainer{
+    visibility: hidden;
+    margin-top: -4%;
+    font-size: 120%;
+    color: white;
+}
+.forgotPasswordContainer a{
+    color: lightblue;
+}
+.forgotPasswordContainer a:hover{
+    color: rgb(1, 1, 94);
+}
+.signContainer{
+    margin-top: 1%;
+    font-size: 120%;
+    color: white;
+}
+.signContainer a{
+    color: lightblue;
+}
+.signContainer a:hover{
+    color: rgb(1, 1, 94);
+}
+
+#submitBtn{
+    width: 100%;
+    font-size: 25px;
+    margin-top: 2%;
+    border-radius: 5px;
+    background-color: navy;
+    color: white;
+    box-shadow: 0px 0px 10px 2px white;
+}
+#submitBtn:hover{
+    transform: scale(1.05);
+    background-color: rgb(1, 1, 78);
+}
+#submitBtn:active{
+    color: black;
+    background-color: rgb(0, 121, 250);
+    transform: scale(1);
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px){
+    #siteName{
+        font-size: 40px;
+    }
+    #loginText{
+        font-size: 40px;
+        margin-bottom: 20px;
+        margin-left: 0%;
+    }
+    .textField{
+        font-size: 2em;
+    }
+    #usernameError{
+        font-size: 2em;
+    }
+    .forgotPasswordContainer{
+        margin-top: 10px;
+        font-size: 2em;
+    }
+    #submitBtn{
+        font-size: 2.3em;
+    }
+    .signContainer{
+        font-size: 2em; 
+    }
+}
+
+/* Laptop-L */
+@media only screen and (min-width: 1440px){
+    header{
+        height: 175px;
+    }
+    #siteName{
+        font-size: 70px;
+    }
+    #loginText{
+        font-size: 60px;
+        margin-bottom: 20px;
+        margin-left: 0%;
+    }
+    .textField{
+        font-size: 3.5em;
+    }
+    #usernameError{
+        font-size: 3em;
+    }
+    .forgotPasswordContainer{
+        margin-top: 10px;
+        font-size: 3em;
+    }
+    #submitBtn{
+        font-size: 4em;
+    }
+    .signContainer{
+        font-size: 3em; 
+    }
+}
+
+/* Laptop-4K */
+@media only screen and (min-width: 2560px){
+    header{
+        height: 400px;
+    }
+    #siteName{
+        font-size: 150px;
+        border: 5px solid white;
+        margin-top: 100px;
+    }
+    #loginText{
+        font-size: 130px;
+        margin-bottom: 80px;
+        margin-left: 0%;
+    }
+    .textField{
+        font-size: 9em;
+    }
+    #usernameError{
+        font-size: 9em;
+    }
+    .forgotPasswordContainer{
+        margin-top: 10px;
+        font-size: 9em;
+    }
+    #submitBtn{
+        font-size: 9em;
+    }
+    .signContainer{
+        font-size: 9em; 
+    }
+}

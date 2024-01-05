@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="gameDashBoard.css">
+</head>
+<body>
+<header>
+    <div class="wrapper">
+        <h1 id="siteName">EXPLORE EASYWIN'S EXCITEMENT</h1>
+        <h1 id="userProfile">PROFILE</h1>
+    </div>
+</header>
+<hr>
+<main>
+
+    <div id="balanceContainer" style="display: none;">
+    <label id="balanceLbl">BALANCE</label>
+    <div id="balance"></div>
+</div>
+
+<button id="withdrawBtn" title="withdraw at 100 or above">WITHDRAW</button>
+<span id="withdrawError">Balance is less than 100. Can't withdraw</span>
+    <div id="displayProfile" style="display: none;">
+        <div id="cut">X</div>
+        <strong>
+        <label class="profil-lbl" id="usernameLbl"></label> <hr>
+        <label class="profil-lbl" id="firstNameLbl"></label> <br> <hr>
+        <label class="profil-lbl" id="lastNameLbl"></label> <br> <hr>
+        <label class="profil-lbl" id="emailLbl"></label> <br> <hr>
+        <label class="profil-lbl" id="birthdateLbl"></label> <br> <hr>
+        <label class="profil-lbl" id="phoneLbl"></label>
+    </strong>
+    </div>
+    <div id="bottomPane" style="display: none;"></div>
+
+    <div id="mainContained">
+
+    <div id="playwinContainer">
+        <h1 id="playwin">PLAY EASILY! WIN EASILY!</h1>
+    </div>
+    <hr>
+    <div class="allImage">
+
+    <div class="imageContainer">
+        <a href="easywinGame.html" title="Play game">
+        <img id="easywinGame" src="../image/easywinGame.png" alt="">
+    </a>
+    </div>
+    <div class="imageContainer" title="View profile">
+        <img id="easywinProfile" src="../image/1984166.webp" alt="easywin logo"> <br>
+        </div>
+    <div class="imageContainer" title="Go home">
+        <a href="../index.html">
+    <img id="easywinLogo" src="../image/easywinLogo.JPEG" alt="easywin logo"> <br>
+    </a>
+    </div>
+
+    </div>
+    <hr>
+
+    <label id="timeTo" for="">Time to play! </label> 
+    <!-- <a href="../sign/easywinLogin.html"><button id="playBtn">Play Now</button></a> <br> <br> -->
+
+</div>
+
+</main>
+    <hr> <br>
+<footer id="footer">
+    <br> <br>
+    <label class="foot">author: EasyWin</label> <br>
+    <label class="foot">&copy;copyright reserved</label> <br>
+    <a class="foot" id="email" href="mailto:frederickmanyo99@gmail.com" title="Email us">frederickmanyo99@gmail.com</a>
+</footer>
+
+<script src="gameDashBoard.js"></script>
+</body>
+</html>

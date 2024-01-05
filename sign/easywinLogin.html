@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="easywinLogin.css">
+</head>
+<body>
+    
+<header>
+    <h1 id="siteName">EASYWIN</h1>
+</header>
+<hr>
+
+    <main>
+
+        <div class="formContainer">
+            
+        <form id="form" method="">
+            <br>
+            <h3 id="loginText">
+                LOGIN
+            </h3>
+            <input class="textField" type="text" id="username" name="username" required placeholder="username"> <br>
+            <span id="usernameError"></span>
+            <input class="textField" type="password" id="password" name="password" required placeholder="password"> <br>
+            <span id="passwordError"></span>
+            <div class="forgotPasswordContainer" id="forgotPassword">
+                <label id="forgotPasswordLbl">Forgot your password?</label>
+                <label id="forgotPasswordLink" ><a href="">Reset</a></label>
+            </div>
+            <div id="submitBtnContainer"> <button id="submitBtn" type="submit">LOGIN</button> </div>
+            <br>
+            <div class="signContainer">
+                <label id="signInLbl">Don't have an account?</label>
+                <label ><a href="easywinRegistration.html">Sign Up</a></label>
+            </div>
+        </form>
+    </div>
+    </main>
+
+    <br> <br> <br> <hr>
+
+    <script src="easywinLogin.js"></script>
+</body>
+</html>

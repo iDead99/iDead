@@ -1,0 +1,192 @@
+body{
+    margin: 0;
+    padding: 0%;
+    background-color: black;
+    /* overflow: hidden; */
+}
+main{
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+header{
+    background-color: navy;
+    text-align: center;
+    height: 120px;
+}
+#siteName{
+    border: 2px solid white;
+    display: inline-block;
+    background-color: black;
+    color: white;
+    margin-top: 40px;
+}
+#birthdateError{
+    color: rgb(255, 0, 0);
+    font-size: 20px;
+}
+#ageDisplay{
+    color: white;
+    font-size: 20px;
+    display: block;
+}
+.formContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-self: center;
+}
+
+.textField{
+    display: block;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif, 'Times New Roman', Times, serif;
+    background-color: white;
+}
+.textField:hover{
+    background-color: rgb(255, 255, 255);
+    transform: scaleY(1.2);
+    box-shadow: 0px 0px 10px 2px white;
+}
+#submitBtn{
+    width: 100%;
+    font-size: 25px;
+    margin-top: 2%;
+    border-radius: 8px;
+    background-color: navy;
+    color: white;
+    box-shadow: 0px 0px 10px 2px white;
+}
+#submitBtn:hover{
+    transform: scale(1.05);
+    background-color: rgb(1, 1, 78);
+}
+#submitBtn:active{
+    color: black;
+    background-color: rgb(0, 121, 250);
+    transform: scale(1);
+}
+
+#birthdateLbl{
+    margin-left: 28px;
+    font-size: 22px;
+    font-weight: bold;
+}
+#countryCode{
+    display: block;
+    border-radius: 5px 5px;
+    font-size:20px;
+    font-weight: bold;
+    font-family: sans-serif, 'Times New Roman', Times, serif;
+    background-color: rgb(234, 234, 234);
+}
+
+#countryCode:hover{
+    box-shadow: 0px 0px 10px 2px white;
+    background-color: gray;
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px){
+
+    #birthdateError{
+        font-size: 30px;
+    }
+    #ageDisplay{
+        font-size: 30px;
+    }
+
+    #siteName{
+        font-size: 40px;
+    }
+    main{
+        margin-bottom: 3em;
+    }
+    #countryCode{
+        margin-top: 40px;
+        /* margin-bottom: 1em; */
+        font-size: 1.6em;
+    }
+    .textField{
+        font-size: 2em;
+    }
+    #submitBtn{
+        font-size: 2.3em;
+    }
+}
+
+/* Laptop-L */
+@media only screen and (min-width: 1440px){
+
+    #birthdateError{
+        font-size: 45px;
+    }
+    #ageDisplay{
+        font-size: 45px;
+    }
+
+    header{
+        height: 175px;
+    }
+    #siteName{
+        font-size: 70px;
+    }
+    main{
+        margin-bottom: 10em;
+    }
+    #countryCode{
+        margin-top: 100px;
+        /* margin-bottom: 1em; */
+        font-size: 2.5em;
+    }
+    .textField{
+        font-size: 3.5em;
+    }
+    #submitBtn{
+        font-size: 4em;
+    }
+
+}
+
+/* Laptop-4K */
+@media only screen and (min-width: 2560px){
+
+    #birthdateError{
+        font-size: 100px;
+    }
+    #ageDisplay{
+        font-size: 100px;
+    }
+
+    header{
+        height: 400px;
+    }
+    main{
+        margin-bottom: 20em;
+    }
+    #countryCode{
+        margin-top: 250px;
+        margin-bottom: 0.3em;
+        font-size: 7em;
+        border-radius: 30px;
+    }
+    #siteName{
+        font-size: 150px;
+        border: 5px solid white;
+        margin-top: 100px;
+    }
+    .textField{
+        font-size: 9em;
+        border-radius: 30px;
+        margin-bottom: 5%;
+    }
+    #submitBtn{
+        font-size: 9em;
+        border-radius: 30px;
+    }
+}
