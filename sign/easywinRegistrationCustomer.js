@@ -109,9 +109,6 @@ function customerRegistration(customerData){
          console.log('Access token not found in localStorage');
          return null;
       }
-      else{
-         window.location.href="easywinLogin.html";
-      }
 
       // http://127.0.0.1:8000/manage_easywin/customers/me/ 
       fetch('https://easywin.onrender.com/manage_easywin/customers/me/', {
@@ -131,6 +128,7 @@ function customerRegistration(customerData){
    .then(data => {
       // localStorage.getItem('access');
       // console.log('Customer registration successful', data);
+      window.location.href="easywinLogin.html";
    })
    .catch(error =>{
       console.log('Error', error)

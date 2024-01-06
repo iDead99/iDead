@@ -73,9 +73,9 @@ header{
 }
 
 #birthdateLbl{
-    margin-left: 28px;
     font-size: 22px;
     font-weight: bold;
+    color: white;
 }
 #countryCode{
     display: block;
@@ -118,6 +118,9 @@ header{
     #submitBtn{
         font-size: 2.3em;
     }
+    #birthdateLbl{
+        font-size: 30px;
+    }
 }
 
 /* Laptop-L */
@@ -149,6 +152,9 @@ header{
     }
     #submitBtn{
         font-size: 4em;
+    }
+    #birthdateLbl{
+        font-size: 55px;
     }
 
 }
@@ -188,5 +194,8 @@ header{
     #submitBtn{
         font-size: 9em;
         border-radius: 30px;
+    }
+    #birthdateLbl{
+        font-size: 120px;
     }
 }
