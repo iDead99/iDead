@@ -532,7 +532,8 @@ function game(){
         }
 
 
-        fetch("http://127.0.0.1:8000/manage_easywin/customers/me/", {
+        // http://127.0.0.1:8000/manage_easywin/customers/me/ 
+        fetch("https://easywin.onrender.com/manage_easywin/customers/me/", {
         headers: {
             'Authorization': `JWT ${accessToken}`,
             'Content-Type': 'application/json',
@@ -550,8 +551,10 @@ function game(){
             let incrementBalance=0.5;
             let newBalance=currentBalance+incrementBalance;
             // console.log(newBalance);
+            
 
-        fetch('http://127.0.0.1:8000/manage_easywin/update-balance/me/', {
+            // http://127.0.0.1:8000/manage_easywin/update-balance/me/ 
+        fetch('https://easywin.onrender.com/manage_easywin/update-balance/me/', {
             method: 'PUT',
             headers: {
                 'Authorization': `JWT ${accessToken}`,

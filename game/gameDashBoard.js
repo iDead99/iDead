@@ -51,7 +51,9 @@ profile.addEventListener('click', function(){
       }
 
 function fetchUser(){
-    fetch("http://127.0.0.1:8000/auth/users/me/", {
+
+    // http://127.0.0.1:8000/auth/users/me/ 
+    fetch("https://easywin.onrender.com/auth/users/me/", {
         headers: {
             'Authorization': `JWT ${accessToken}`,
             'Content-Type': 'application/json',
@@ -74,7 +76,9 @@ function fetchUser(){
 fetchUser();
 fetchUserProfile();
 function fetchUserProfile(){
-    fetch("http://127.0.0.1:8000/manage_easywin/customers/me/", {
+
+    // http://127.0.0.1:8000/manage_easywin/customers/me/
+    fetch("https://easywin.onrender.com/manage_easywin/customers/me/", {
         headers: {
             'Authorization': `JWT ${accessToken}`,
             'Content-Type': 'application/json',

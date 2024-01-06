@@ -23,7 +23,8 @@ form.addEventListener('submit', function(e){
          password: formData.get('password'),
       };
     
-   fetch("http://127.0.0.1:8000/auth/jwt/create",{
+      // http://127.0.0.1:8000/auth/jwt/create 
+   fetch("https://easywin.onrender.com/auth/jwt/create",{
     method: 'POST',
     headers: {
        'Content-Type': 'application/json'

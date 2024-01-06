@@ -51,7 +51,8 @@ form.addEventListener('submit', function(event){
     }
 
 function userRegistration(userData){
-    fetch("http://127.0.0.1:8000/auth/users/", {
+    // http://127.0.0.1:8000/auth/users/ 
+    fetch("https://easywin.onrender.com/auth/users/", {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -106,7 +107,8 @@ userRegistration(userData);
 
 
 function authenticateUser(userData){
-    fetch("http://127.0.0.1:8000/auth/jwt/create",{
+    // http://127.0.0.1:8000/auth/jwt/create 
+    fetch("https://easywin.onrender.com/auth/jwt/create",{
         method: 'POST',
         headers: {
            'Content-Type': 'application/json'

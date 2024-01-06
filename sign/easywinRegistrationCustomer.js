@@ -113,7 +113,8 @@ function customerRegistration(customerData){
          window.location.href="easywinLogin.html";
       }
 
-      fetch('http://127.0.0.1:8000/manage_easywin/customers/me/', {
+      // http://127.0.0.1:8000/manage_easywin/customers/me/ 
+      fetch('https://easywin.onrender.com/manage_easywin/customers/me/', {
       method: 'PUT',
       headers: {
          'Authorization': `JWT ${accessToken}`,
