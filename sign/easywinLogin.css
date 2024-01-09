@@ -33,12 +33,12 @@ main{
 #pendingLbl{
     color: white;
     animation: pendingMove 2s infinite;
-    margin-left: 50px;
-    display: none;
+    margin-left: 30px;
+    /* display: none; */
 }
 @keyframes pendingMove {
     from{color: yellow;}
-    50%{margin-left: 190px;}
+    50%{margin-left: 200px;}
 }
 
 #loginText{
