@@ -32,15 +32,13 @@ main{
 }
 #pendingLbl{
     color: white;
-    display: flex;
-    justify-content: center;
     animation: pendingMove 2s infinite;
-    transform: translateX(-50px);
+    margin-left: 50px;
     display: none;
 }
 @keyframes pendingMove {
-    50%{transform: translateX(50px);}
     from{color: yellow;}
+    50%{margin-left: 190px;}
 }
 
 #loginText{
