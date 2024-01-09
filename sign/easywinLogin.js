@@ -22,7 +22,6 @@ form.addEventListener('submit', function(e){
       pending.style.display='flex';
       pending.style.justifyContent='center';
       pending.style.animationPlayState='paused';
-      return;
    }
    else{
       pending.innerHTML="● ● ●";
