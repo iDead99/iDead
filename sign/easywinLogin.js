@@ -5,6 +5,7 @@ let password=document.getElementById("password");
 let usernameError=document.getElementById("usernameError");
 let forgotPassword=document.getElementById("forgotPassword");
 let pending=document.getElementById("pendingLbl");
+let pendingError=document.getElementById("pendingError");
 
 username.addEventListener('input', function(){
    usernameError.textContent='';
@@ -13,20 +14,17 @@ password.addEventListener('input', function(){
    usernameError.textContent='';
 })
 
-
 form.addEventListener('submit', function(e){
    e.preventDefault();
 
    if(!navigator.onLine){
-      pending.innerHTML="You're offline";
-      pending.style.display='flex';
-      pending.style.justifyContent='center';
-      pending.style.animationPlayState='paused';
+      pending.innerHTML='';
+      pendingError.innerHTML='Oops!! Poor Connection';
+      return null;
    }
    else{
-      pending.innerHTML="● ● ●";
-
-   }
+      pendingError.innerHTML='';
+      pending.innerHTML='● ● ●';
 
    const formData=new FormData(this);
 
@@ -64,4 +62,8 @@ form.addEventListener('submit', function(e){
 .catch(error => {
     console.log('Error', error);
 });
+
+return;
+}
+
 })

@@ -1,4 +1,6 @@
 let form=document.getElementById("form");
+let pending=document.getElementById("pendingLbl");
+let pendingError=document.getElementById("pendingError");
 function populateCountryCodes(){
    const countryCodes = [
       {name: "USA (1)", code: "+1"},
@@ -67,6 +69,15 @@ birthdate.addEventListener('input', function(){
 form.addEventListener('submit', function(event){
    event.preventDefault();
 
+   if(!navigator.onLine){
+      pending.innerHTML='';
+      pendingError.innerHTML='Oops!! Poor Connection';
+      return null;
+   }
+      else{
+      pendingError.innerHTML='';
+      pending.innerHTML='● ● ●';
+
    const countryCode=document.getElementById("countryCode").value;
    const phoneNumber=document.getElementById("phoneNumber").value;
    const birthdate=document.getElementById("birthdate").value;
@@ -84,16 +95,19 @@ form.addEventListener('submit', function(event){
 
    if(age<18 && age>=0){
       if(age===1){
+      pending.innerHTML='';
       birthdateError.textContent='user must be 18 or older';
       ageDisplay.textContent=`You're ${age}yr`
       }
       else{
+         pending.innerHTML='';
          birthdateError.textContent='user must be 18 or older';
          ageDisplay.textContent=`You're ${age}yrs`
          }
       return;
    }
    else if(age<0){
+      pending.innerHTML='';
       birthdateError.textContent='user must be 18 or older';
       ageDisplay.textContent='You don\'t exist'
       return;
@@ -142,6 +156,8 @@ function customerRegistration(customerData){
    };
 
    customerRegistration(customerData);
+
+}
 
 });
 

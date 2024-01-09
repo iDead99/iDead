@@ -11,21 +11,25 @@
     <header>
         <h1 id="siteName">EASYWIN</h1>
     </header>
-    <hr><br> <br>
+    <hr><br>
 
     <main>
 
     <div class="formContainer">
         
-    <form id="form" method="post">
+        <form id="form" method="post">
+        <label id="pendingLbl"></label>
+        <label id="pendingError"></label>
+        <br>
+        
         <div id="pane1">
-            <label id="pane1lbl">EASY WIN</label>
+        <label id="pane1lbl">EASY WIN</label>
         </div>
         <select id="countryCode"></select>
         <input class="textField" type="tel" id="phoneNumber" pattern="[0-9]*" inputmode="numeric" required placeholder="phone number" maxlength="10"> <br>
         <span id="phoneError"></span>
         <label for="birthdate" id="birthdateLbl">birthdate:</label>
-        <input class="textField" type="date" id="birthdate" required> <br>
+        <input class="textField" type="date" id="birthdate" value="2000-01-01" required> <br>
         <span id="birthdateError"></span>
         <span id="ageDisplay"></span>
         

@@ -10,6 +10,8 @@ let email=document.getElementById("email");
 let emailError=document.getElementById("emailError");
 let first_name=document.getElementById("first-name");
 let last_name=document.getElementById("last-name");
+let pending=document.getElementById("pendingLbl");
+let pendingError=document.getElementById("pendingError");
 
 username.addEventListener('input', function(){
     usernameError.style.display='none';
@@ -37,7 +39,17 @@ email.addEventListener('input', function(){
 form.addEventListener('submit', function(event){
    event.preventDefault();
 
-   if(password.value!==confirm_password.value){
+   if(!navigator.onLine){
+    pending.innerHTML='';
+    pendingError.innerHTML='Oops!! Poor Connection';
+    return null;
+    }
+    else{
+    pendingError.innerHTML='';
+    pending.innerHTML='● ● ●';
+
+    if(password.value!==confirm_password.value){
+    pending.innerHTML='';
     passwordError1.style.display='block';
     passwordError2.innerHTML='Passwords do not match!';
     password.value='';
@@ -45,6 +57,7 @@ form.addEventListener('submit', function(event){
     return;
     }
     else if(password.value.length<8){
+        pending.innerHTML='';
         passwordTooShort.style.display='block';
         passwordError2.innerHTML='Must contain at least 8 characters';
         return;
@@ -64,10 +77,12 @@ function userRegistration(userData){
             // throw new Error("Network not ok");
         return response.json().then(error =>{
             if(error.username){
+                pending.innerHTML='';
                 usernameError.style.display='block';
                 // return;
             }
             if(error.email){
+                pending.innerHTML='';
                 emailError.style.display='block';
                 // return;
             }
@@ -138,7 +153,7 @@ function authenticateUser(userData){
     
 }
 
-
+}
 
 
 

@@ -33,7 +33,12 @@ main{
 #pendingLbl{
     color: white;
     animation: pendingMove 2s infinite;
-    display: block;
+    display: inline-block;
+}
+#pendingError{
+    color: white;
+    display: flex;
+    justify-content: center;
 }
 @keyframes pendingMove {
     from{color: yellow;}
@@ -125,6 +130,9 @@ main{
         from{color: yellow;}
         50%{transform: translateX(25em);}
     }
+    #pendingError{
+        font-size: 1.5em;
+    }
     .textField{
         font-size: 2em;
     }
@@ -162,6 +170,9 @@ main{
     @keyframes pendingMove {
         from{color: yellow;}
         50%{transform: translateX(22em);}
+    }
+    #pendingError{
+        font-size: 2em;
     }
     .textField{
         font-size: 3.5em;
@@ -202,6 +213,9 @@ main{
     @keyframes pendingMove {
         from{color: yellow;}
         50%{transform: translateX(28em);}
+    }
+    #pendingError{
+        font-size: 4em;
     }
     .textField{
         font-size: 9em;

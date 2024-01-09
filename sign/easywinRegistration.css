@@ -38,6 +38,20 @@ header{
     font-weight: bold;
     font-size: 20px;
 }
+#pendingLbl{
+    color: white;
+    animation: pendingMove 2s infinite;
+    display: inline-block;
+}
+#pendingError{
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+@keyframes pendingMove {
+    from{color: yellow;}
+    50%{transform: translateX(15em);}
+}
 #usernameError{
     color: rgb(255, 0, 0);
     font-size: 20px;
@@ -140,6 +154,13 @@ header{
         margin-bottom: 20px;
         margin-left: 0%;
     }
+    @keyframes pendingMove {
+        from{color: yellow;}
+        50%{transform: translateX(25em);}
+    }
+    #pendingError{
+        font-size: 1.5em;
+    }
     .textField{
         font-size: 2em;
     }
@@ -171,10 +192,20 @@ header{
     #siteName{
         font-size: 70px;
     }
-    #loginText{
+    #signUpText{
         font-size: 60px;
         margin-bottom: 20px;
         margin-left: 0%;
+    }
+    #pendingLbl{
+        font-size: 2em;
+    }
+    @keyframes pendingMove {
+        from{color: yellow;}
+        50%{transform: translateX(22em);}
+    }
+    #pendingError{
+        font-size: 2em;
     }
     .textField{
         font-size: 3.5em;
@@ -220,6 +251,16 @@ header{
         font-size: 130px;
         margin-bottom: 80px;
         margin-left: 0%;
+    }
+    #pendingLbl{
+        font-size: 4em;
+    }
+    @keyframes pendingMove {
+        from{color: yellow;}
+        50%{transform: translateX(28em);}
+    }
+    #pendingError{
+        font-size: 4em;
     }
     .textField{
         font-size: 9em;

@@ -23,6 +23,20 @@ header{
     color: white;
     margin-top: 40px;
 }
+#pendingLbl{
+    color: white;
+    animation: pendingMove 2s infinite;
+    display: inline-block;
+}
+#pendingError{
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+@keyframes pendingMove {
+    from{color: yellow;}
+    50%{transform: translateX(15em);}
+}
 #birthdateError{
     color: rgb(255, 0, 0);
     font-size: 20px;
@@ -104,6 +118,13 @@ header{
     #siteName{
         font-size: 40px;
     }
+    @keyframes pendingMove {
+        from{color: yellow;}
+        50%{transform: translateX(25em);}
+    }
+    #pendingError{
+        font-size: 1.5em;
+    }
     main{
         margin-bottom: 3em;
     }
@@ -142,6 +163,16 @@ header{
     main{
         margin-bottom: 10em;
     }
+    #pendingLbl{
+        font-size: 2em;
+    }
+    @keyframes pendingMove {
+        from{color: yellow;}
+        50%{transform: translateX(22em);}
+    }
+    #pendingError{
+        font-size: 2em;
+    }
     #countryCode{
         margin-top: 100px;
         /* margin-bottom: 1em; */
@@ -174,6 +205,16 @@ header{
     }
     main{
         margin-bottom: 20em;
+    }
+    #pendingLbl{
+        font-size: 4em;
+    }
+    @keyframes pendingMove {
+        from{color: yellow;}
+        50%{transform: translateX(28em);}
+    }
+    #pendingError{
+        font-size: 4em;
     }
     #countryCode{
         margin-top: 250px;
