@@ -16,6 +16,7 @@ password.addEventListener('input', function(){
 
 form.addEventListener('submit', function(e){
    e.preventDefault();
+   pending.style.display='block';
 
    const formData=new FormData(this);
 
@@ -41,9 +42,6 @@ form.addEventListener('submit', function(e){
          pending.style.display='none';
         })
 
-   }
-   else{
-      pending.style.display='block';
    }
    return response.json();
 })
