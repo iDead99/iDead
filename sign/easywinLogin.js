@@ -4,6 +4,7 @@ let username=document.getElementById("username");
 let password=document.getElementById("password");
 let usernameError=document.getElementById("usernameError");
 let forgotPassword=document.getElementById("forgotPassword");
+let pending=document.getElementById("pendingLbl");
 
 username.addEventListener('input', function(){
    usernameError.textContent='';
@@ -37,8 +38,12 @@ form.addEventListener('submit', function(e){
       return response.json().then(error => {
          usernameError.textContent='Incorrect username or password!';
          forgotPassword.style.visibility="visible";
+         pending.style.display='none';
         })
-      
+
+   }
+   else{
+      pending.style.display='block';
    }
    return response.json();
 })
@@ -47,7 +52,6 @@ form.addEventListener('submit', function(e){
    localStorage.setItem('accessToken', accessToken);
    window.location.href="../game/gameDashBoard.html";
    // console.log('Login successful\nRefresh: ',data.refresh +'\nAccess: ',data.access );
- 
 })
 .catch(error => {
     console.log('Error', error);

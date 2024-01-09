@@ -30,6 +30,18 @@ main{
     display: inline-block;
     transform: translateY(-8px);
 }
+#pendingLbl{
+    color: white;
+    display: flex;
+    justify-content: center;
+    animation: pendingMove 2s infinite;
+    transform: translateX(-50px);
+    display: none;
+}
+@keyframes pendingMove {
+    50%{transform: translateX(50px);}
+    from{color: yellow;}
+}
 
 #loginText{
     color: white;
