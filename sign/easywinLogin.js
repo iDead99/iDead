@@ -16,7 +16,18 @@ password.addEventListener('input', function(){
 
 form.addEventListener('submit', function(e){
    e.preventDefault();
-   pending.style.display='block';
+
+   if(!navigator.onLine){
+      pending.innerHTML="You're offline";
+      pending.style.display='flex';
+      pending.style.justifyContent='center';
+      pending.style.animationPlayState='paused';
+      return;
+   }
+   else{
+      pending.innerHTML="● ● ●";
+
+   }
 
    const formData=new FormData(this);
 
@@ -39,7 +50,7 @@ form.addEventListener('submit', function(e){
       return response.json().then(error => {
          usernameError.textContent='Incorrect username or password!';
          forgotPassword.style.visibility="visible";
-         pending.style.display='none';
+         pending.innerHTML='';
         })
 
    }

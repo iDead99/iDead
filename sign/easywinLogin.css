@@ -33,7 +33,7 @@ main{
 #pendingLbl{
     color: white;
     animation: pendingMove 2s infinite;
-    display: none;
+    display: block;
 }
 @keyframes pendingMove {
     from{color: yellow;}
