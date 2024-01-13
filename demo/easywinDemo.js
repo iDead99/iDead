@@ -1,6 +1,6 @@
 function game(){
     let computerGuess=Math.floor((Math.random()*10)+1);
-    console.log(computerGuess);
+    // console.log(computerGuess);
     let playerGuess;
     let guesses=0;
     let endGuess=3;

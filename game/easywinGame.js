@@ -1,6 +1,6 @@
 function game(){
     let computerGuess=Math.floor((Math.random()*10)+1);
-    console.log(computerGuess);
+    // console.log(computerGuess);
     let playerGuess;
     let guesses=0;
     let endGuess=3;
@@ -527,7 +527,7 @@ function game(){
         const accessToken=localStorage.getItem('accessToken');
         // console.log(accessToken);
         if(!accessToken){
-           console.log('Access token not found in localStorage');
+        //    console.log('Access token not found in localStorage');
            return null;
         }
 

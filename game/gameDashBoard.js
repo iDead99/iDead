@@ -44,7 +44,7 @@ profile.addEventListener('click', function(){
     const accessToken=localStorage.getItem('accessToken');
     //   console.log(accessToken);
       if(!accessToken){
-         console.log('Access token not found in localStorage');
+        //  console.log('Access token not found in localStorage');
          return null;
       }
       else{
