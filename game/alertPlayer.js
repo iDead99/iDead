@@ -29,7 +29,8 @@ document.getElementById("checkBox").addEventListener('change', function(){
 
 
 function putCheckBox(checkBox){
-    fetch("http://127.0.0.1:8000/manage_easywin/checkbox/me/", {
+    // http://127.0.0.1:8000/manage_easywin/checkbox/me/ 
+    fetch("https://easywin.onrender.com/manage_easywin/checkbox/me/", {
         method: 'PUT',
         headers: {
             'Authorization': `JWT ${accessToken}`,
