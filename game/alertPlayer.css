@@ -1,0 +1,120 @@
+body{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+main{
+    overflow: hidden;
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    /* border: 5px solid red; */
+}
+.alert{
+    width: fit-content;
+    border: 2px solid white;
+    border-bottom: 0;
+    border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin-bottom: 0;
+    overflow: auto;
+    box-shadow: 0px 0px 50px 2px rgb(207, 207, 207);
+    color: white;
+    font-size: 21px;
+    padding: 10px;
+}
+.okBtn{
+    width: 300px;
+    border: 2px solid white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: larger;
+    /* margin-left: 10px; */
+}
+.okBtn:hover{
+    background-color: rgb(201, 201, 201);
+}
+.okBtn:active{
+    background-color: gray;
+}
+#chkLbl{
+    font-size: 20px;
+    color: aqua;
+}
+input[type="checkbox"]{
+    transform: scale(1.4);
+    margin-bottom: 10px;
+}
+
+/* Tablet-Laptop */
+@media only screen and (min-width:768px){
+    .container{
+        width: 500px;
+    }
+    .alert{
+        font-size: 35px;
+    }
+    .okBtn{
+        width: 500px;
+        font-size: 30px;
+    }
+    #chkLbl{
+        font-size: 25px;
+        margin-left: 10px;
+    }
+    input[type="checkbox"]{
+        transform: scale(2);
+        margin-left: 10px;
+        margin-bottom: 15px;
+    }
+}
+/* Laptop-L 1440 */
+@media only screen and (min-width:1440px){
+    .container{
+        width: 850px;
+    }
+    .alert{
+        font-size: 50px;
+    }
+    .okBtn{
+        width: 850px;
+        font-size: 50px;
+    }
+    #chkLbl{
+        font-size: 40px;
+        margin-left: 10px;
+        margin-top: 100px;
+    }
+    input[type="checkbox"]{
+        transform: scale(3);
+        margin-left: 10px;
+        margin-bottom: 30px;
+    }
+}
+/* Laptop-L 2560 */
+@media only screen and (min-width:2560px){
+    .container{
+        width: 1900px;
+    }
+    .alert{
+        font-size: 100px;
+    }
+    .okBtn{
+        width: 1900px;
+        font-size: 100px;
+    }
+    #chkLbl{
+        font-size: 80px;
+        margin-left: 50px;
+    }
+    input[type="checkbox"]{
+        transform: scale(6);
+        margin-left: 30px;
+        margin-bottom: 50px;
+    }
+}

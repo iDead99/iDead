@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easywin</title>
+    <link rel="icon" type="image/png" href="../image/easywinFavicon.png">
+    <link rel="stylesheet" href="alertPlayer.css">
+</head>
+<body>
+    <div class="container" id="withdrawContainer">
+    <p class="alert" id="withdrawalAlert">
+        Congratulations on choosing to play on our website!
+        Every time you play and win, 0.5 will be added to your balance.
+        It's a journey to accumulate winnings! Please note that withdrawals
+        are possible once your balance reaches 100. Enjoy the games,
+        and good luck on your path to big wins!
+        <hr>
+    </p>
+    <button class="okBtn" id="okWithdrawBtn">OK</button>
+    </div>
+
+    <div class="container" id="refreshContainer" style="display: none;">
+    <p class="alert" id="refreshAlert">
+        Hey there! <br>
+        <strong>Just a quick heads up:</strong> <br>
+        If you refresh the page while a game is in play mode, your progress will be considered a loss. So, play smart, stay engaged, and may the odds be ever in your favor! Good luck and have fun!
+        <hr>
+    </p>
+    <input id="checkBox" type="checkbox">
+    <label for="checkBox" id="chkLbl">Don't show this again</label>
+    <button class="okBtn" id="okRefreshBtn">OK</button>
+    </div>
+
+    <script src="alertPlayer.js"></script>
+</body>
+</html>

@@ -17,6 +17,42 @@ let bottomPane=document.getElementById("bottomPane");
 let footer=document.getElementById("footer");
 let withdraw=document.getElementById("withdrawBtn");
 let withdrawError=document.getElementById("withdrawError");
+let easywinGame = document.getElementById("easywinGame");
+
+
+const accessToken=localStorage.getItem('accessToken');
+
+function putCheckBox(){
+    // http://127.0.0.1:8000/manage_easywin/checkbox/me/
+    fetch("https://easywin.onrender.com/manage_easywin/checkbox/me/", {
+        headers: {
+            'Authorization': `JWT ${accessToken}`,
+            'Content-Type': 'application/json',
+            },
+    })
+    .then(response => {
+        if(!response){
+            throw new Error('Network is not ok!')
+        }
+        return response.json();
+    })
+    .then(data => {
+        if(data.check_box==='checked'){
+            window.location.href='easywinGame.html';
+        }
+        else if(data.check_box==='unchecked'){
+            window.location.href='alertPlayer.html';
+        }
+    })
+    .catch(error => {
+        console.log(error)
+    })
+    }
+
+easywinGame.addEventListener('click', function(){
+    putCheckBox();
+})
+
 
 cut.onclick=function(){
     siteName.style.display='block';
@@ -40,15 +76,6 @@ profile.addEventListener('click', function(){
     bottomPane.style.display='block';
     balanceContainer.style.display='block';
     withdraw.style.display='block';
-
-    const accessToken=localStorage.getItem('accessToken');
-    //   console.log(accessToken);
-      if(!accessToken){
-        //  console.log('Access token not found in localStorage');
-         return null;
-      }
-      else{
-      }
 
 function fetchUser(){
 
